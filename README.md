@@ -1,6 +1,6 @@
 # PenCrawLer
 An Advanced Web Crawler and DirBuster
-PeNCrawLer is an advanced webcrawler and dirbuster designed to using in penetration testing based on Windows Os.
+PeNCrawLer is an advanced webcrawler and dirbuster designed to use in penetration testing based on Windows Os.
 
 To read more about features please read the wiki:
  
