@@ -62,6 +62,8 @@ namespace PeNCrawLer_0._1._0
 
                 foreach(ListViewItem item in lvwHtmlElements.Items)
                 {
+                    if (CrawlerSettings.HtmlTagAndAttribute.ContainsKey(item.Text))
+                        continue;
                     CrawlerSettings.HtmlTagAndAttribute.Add(item.Text, item.SubItems[1].Text);
                 }
             }
@@ -72,6 +74,8 @@ namespace PeNCrawLer_0._1._0
 
                 foreach (ListViewItem item in lvwLimitCrawling.Items)
                 {
+                    if (CrawlerSettings.LinksPatternAndMaxValue.ContainsKey(item.Text))
+                        continue;
                     CrawlerSettings.LinksPatternAndMaxValue.Add(item.Text, int.Parse(item.SubItems[1].Text));
                 }
             }
@@ -82,6 +86,8 @@ namespace PeNCrawLer_0._1._0
 
                 foreach(ListViewItem item in lvwSearch.Items)
                 {
+                    if (CrawlerSettings.SearchInputAndValue.ContainsKey(item.Text[0]))
+                        continue;
                     CrawlerSettings.SearchInputAndValue.Add(item.Text[0], item.SubItems[1].Text);
                 }
             }
@@ -92,6 +98,8 @@ namespace PeNCrawLer_0._1._0
 
                 foreach(ListViewItem item in lvwFormSubmission.Items)
                 {
+                    if (FormSubmissionSettings.FieldnameAndFieldvalue.ContainsKey(item.SubItems[1].Text))
+                        continue;
                     FormSubmissionSettings.FieldnameAndFieldvalue.Add(item.SubItems[1].Text, item.SubItems[2].Text);
                 }
             }
@@ -102,6 +110,8 @@ namespace PeNCrawLer_0._1._0
                 foreach(string header in lbxHeaders.Items)
                 {
                     string[] values = header.Split(':');
+                    if (HttpRequestSettings.HeaderAndValue.ContainsKey(values[0]))
+                        continue;
                     HttpRequestSettings.HeaderAndValue.Add(values[0], values[1]);
                 }
             }
